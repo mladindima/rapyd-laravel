@@ -3,7 +3,7 @@
 namespace Zofe\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
 use Zofe\Rapyd\Rapyd;
 
 class Daterange extends Date

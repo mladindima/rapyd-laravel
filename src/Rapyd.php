@@ -2,7 +2,7 @@
 
 use Illuminate\Container\Container;
 use Collective\Html\HtmlFacade as HTML;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
 
 class Rapyd
 {
