@@ -1,4 +1,4 @@
-<?php namespace Zofe\Rapyd\Exceptions;
+<?php namespace Mladindima\Rapyd\Exceptions;
 
 use Exception;
 

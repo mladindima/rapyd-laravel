@@ -1,4 +1,4 @@
-<?php namespace Zofe\Rapyd;
+<?php namespace Mladindima\Rapyd;
 
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
@@ -10,7 +10,7 @@ class Persistence
     {
         $s =  Session::get('rapyd.' . $url, $url);
         $old_params = parse_url($s, PHP_URL_QUERY);
-        
+
         if ($qs) {
             $base = str_replace(Request::path(),'',strtok(Request::fullUrl(),'?'));
             $url = str_replace($base, '/', strtok($url,'?'));

@@ -1,17 +1,17 @@
 <?php
 
-namespace Zofe\Rapyd\DataForm\Field;
+namespace Mladindima\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
 use Illuminate\Support\Facades\Input;
-use Zofe\Rapyd\Rapyd;
+use Mladindima\Rapyd\Rapyd;
 
 class Daterange extends Date
 {
     public $type = "daterange";
     public $multiple = true;
     public $clause = "wherebetween";
-    
+
     public function getNewValue()
     {
         Field::getNewValue();
@@ -37,14 +37,14 @@ class Daterange extends Date
             $this->value = implode($this->serialization_sep, $values);
         }
     }
-    
+
     public function build()
     {
         $output = "";
 
         unset($this->attributes['type']);
         if (parent::build() === false) return;
-        
+
         switch ($this->status) {
 
             case "show":

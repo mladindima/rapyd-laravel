@@ -1,6 +1,6 @@
 <?php
 
-namespace Zofe\Rapyd\DataForm\Field;
+namespace Mladindima\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
 use Illuminate\Support\Facades\Input;
@@ -42,8 +42,8 @@ class File extends Field
             }
         }
     }
-    
-    
+
+
     public function rule($rule)
     {
         //we should consider rules only on upload
@@ -65,7 +65,7 @@ class File extends Field
 
         return $this;
     }
-    
+
     public function autoUpdate($save = false)
     {
 

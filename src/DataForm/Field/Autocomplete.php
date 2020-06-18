@@ -1,12 +1,12 @@
 <?php
 
-namespace Zofe\Rapyd\DataForm\Field;
+namespace Mladindima\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use MyProject\Proxies\__CG__\stdClass;
-use Zofe\Rapyd\Rapyd;
+use Mladindima\Rapyd\Rapyd;
 
 class Autocomplete extends Field
 {
@@ -53,7 +53,7 @@ class Autocomplete extends Field
         $this->change = $callback;
         return $this;
     }
-    
+
     public function minChars($len)
     {
         $this->min_chars = $len;

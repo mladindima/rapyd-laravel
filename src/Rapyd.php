@@ -1,4 +1,4 @@
-<?php namespace Zofe\Rapyd;
+<?php namespace Mladindima\Rapyd;
 
 use Illuminate\Container\Container;
 use Collective\Html\HtmlFacade as HTML;
@@ -29,7 +29,7 @@ class Rapyd
     /**
      * Get the Container from Rapyd
      *
-     * @param  string    $service 
+     * @param  string    $service
      * @return Container
      */
     public static function getContainer($service = null)
@@ -59,7 +59,7 @@ class Rapyd
         foreach (self::$tag as $item) {
             $buffer .= HTML::script($item, ['type'=>'riot/tag']);
         }
-        
+
         //inline styles & scripts
         if (count(self::$styles)) {
             $buffer .= sprintf("<style type=\"text/css\">\n%s\n</style>", implode("\n", self::$styles));
@@ -79,12 +79,12 @@ class Rapyd
         foreach (self::$js as $item) {
             $buffer .= HTML::script($item);
         }
-        
+
         //riot tags
         foreach (self::$tag as $item) {
             $buffer .= HTML::script($item, ['type'=>'riot/tag']);
         }
-        
+
         //inline scripts
         if (count(self::$scripts)) {
             $buffer .= sprintf("\n<script language=\"javascript\" type=\"text/javascript\">\n\$(document).ready(function () {\n\n %s \n\n});\n\n</script>\n", implode("\n", self::$scripts));
@@ -103,7 +103,7 @@ class Rapyd
         }
 
         if ($demo) {
-            $buffer .= HTML::style('packages/zofe/rapyd/assets/demo/style.css'); 
+            $buffer .= HTML::style('packages/zofe/rapyd/assets/demo/style.css');
         }
         //inline styles
         if (count(self::$styles)) {
@@ -132,7 +132,7 @@ class Rapyd
         if (!in_array('packages/zofe/rapyd/assets/'.$tag, self::$tag))
             self::$tag[] = 'packages/zofe/rapyd/assets/'.$tag;
     }
-    
+
     public static function script($script)
     {
         self::$scripts[] = $script;

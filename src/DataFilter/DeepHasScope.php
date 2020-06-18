@@ -1,6 +1,6 @@
 <?php
 
-namespace Zofe\Rapyd\DataFilter;
+namespace Mladindima\Rapyd\DataFilter;
 
 trait DeepHasScope {
 

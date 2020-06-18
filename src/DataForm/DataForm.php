@@ -1,32 +1,32 @@
 <?php
 
-namespace Zofe\Rapyd\DataForm;
+namespace Mladindima\Rapyd\DataForm;
 
 use Illuminate\Database\Eloquent\Model;
-use Zofe\Rapyd\DataForm\Field\Auto;
-use Zofe\Rapyd\DataForm\Field\Autocomplete;
-use Zofe\Rapyd\DataForm\Field\Colorpicker;
-use Zofe\Rapyd\DataForm\Field\Date;
-use Zofe\Rapyd\DataForm\Field\Field;
-use Zofe\Rapyd\DataForm\Field\File;
-use Zofe\Rapyd\DataForm\Field\Hidden;
-use Zofe\Rapyd\DataForm\Field\Password;
-use Zofe\Rapyd\DataForm\Field\Radiogroup;
-use Zofe\Rapyd\DataForm\Field\Redactor;
-use Zofe\Rapyd\DataForm\Field\Select;
-use Zofe\Rapyd\DataForm\Field\Tags;
-use Zofe\Rapyd\DataForm\Field\Number;
-use Zofe\Rapyd\DataForm\Field\Numberrange;
-use Zofe\Rapyd\DataForm\Field\Text;
-use Zofe\Rapyd\DataForm\Field\Textarea;
-use Zofe\Rapyd\Widget;
+use Mladindima\Rapyd\DataForm\Field\Auto;
+use Mladindima\Rapyd\DataForm\Field\Autocomplete;
+use Mladindima\Rapyd\DataForm\Field\Colorpicker;
+use Mladindima\Rapyd\DataForm\Field\Date;
+use Mladindima\Rapyd\DataForm\Field\Field;
+use Mladindima\Rapyd\DataForm\Field\File;
+use Mladindima\Rapyd\DataForm\Field\Hidden;
+use Mladindima\Rapyd\DataForm\Field\Password;
+use Mladindima\Rapyd\DataForm\Field\Radiogroup;
+use Mladindima\Rapyd\DataForm\Field\Redactor;
+use Mladindima\Rapyd\DataForm\Field\Select;
+use Mladindima\Rapyd\DataForm\Field\Tags;
+use Mladindima\Rapyd\DataForm\Field\Number;
+use Mladindima\Rapyd\DataForm\Field\Numberrange;
+use Mladindima\Rapyd\DataForm\Field\Text;
+use Mladindima\Rapyd\DataForm\Field\Textarea;
+use Mladindima\Rapyd\Widget;
 use Collective\Html\FormFacade as Form;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
-use Zofe\Rapyd\Rapyd;
+use Mladindima\Rapyd\Rapyd;
 
 /**
  * Class DataForm
@@ -63,7 +63,7 @@ use Zofe\Rapyd\Rapyd;
  * @method Date         addDate        (string $name, string $label, string $validation = '')
  * @method Auto         addAuto        (string $name, string $label, string $validation = '')
  *
- * @package Zofe\Rapyd\DataForm
+ * @package Mladindima\Rapyd\DataForm
  */
 class DataForm extends Widget
 {
@@ -72,7 +72,7 @@ class DataForm extends Widget
     public $model_relations;
     public $validator;
     public $validator_messages = array();
-    
+
     public $output = "";
     public $custom_output = null;
     public $fields = array();
@@ -112,7 +112,7 @@ class DataForm extends Widget
         if (strpos($type, "\\") !== false) {
             $field_class = $type;
         } else {
-            $field_class = '\Zofe\Rapyd\DataForm\Field\\' .  ucfirst($type);
+            $field_class = '\Mladindima\Rapyd\DataForm\Field\\' .  ucfirst($type);
         }
 
         //instancing
@@ -209,7 +209,7 @@ class DataForm extends Widget
      * get field instance from fields array
      * @param string $field_name
      * @param array $attributes
-     * @return \Zofe\Rapyd\DataForm\Field $field
+     * @return \Mladindima\Rapyd\DataForm\Field $field
      */
     public function field($field_name, array $attributes = array())
     {
@@ -274,9 +274,9 @@ class DataForm extends Widget
      */
     public function errors($messages = [])
     {
-        $this->validator_messages = $messages; 
+        $this->validator_messages = $messages;
     }
-    
+
     /**
      * @return bool
      */
@@ -510,7 +510,7 @@ class DataForm extends Widget
             } elseif ($result && is_a($result, 'Illuminate\View\View')) {
                 $this->custom_output = $result;
             }
-            
+
             //reprocess if an error is added in closure
             if ($this->process_status == 'error') {
                 $this->process();
@@ -579,7 +579,7 @@ class DataForm extends Widget
     {
         return ($this->custom_output != null) ? true : false;
     }
-    
+
     /**
      * @return string
      */
@@ -660,7 +660,7 @@ class DataForm extends Widget
         $this->has_placeholders = true;
         return $this;
     }
-    
+
     /**
      * Magic method to catch all appends
      *
@@ -675,7 +675,7 @@ class DataForm extends Widget
             $name = substr($name, 3);
         }
 
-        $classname = '\Zofe\Rapyd\DataForm\Field\\'.ucfirst($name);
+        $classname = '\Mladindima\Rapyd\DataForm\Field\\'.ucfirst($name);
 
         if (class_exists($classname)) {
             array_push($arguments, $name);

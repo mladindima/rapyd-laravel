@@ -1,6 +1,6 @@
 <?php
 
-namespace Zofe\Rapyd\DataForm\Field;
+namespace Mladindima\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
 use Illuminate\Support\Facades\Schema;
@@ -11,8 +11,8 @@ class Container extends Field
     public $type = "container";
     public $pattern = '';
     public $is_view = false;
-    
-    
+
+
     public function autoUpdate($save = false)
     {
         $this->getValue();
@@ -30,11 +30,11 @@ class Container extends Field
         $this->is_view = true;
         return $this;
     }
-    
+
     public function build()
     {
         $output = "";
-        
+
         if (parent::build() === false) return;
 
         switch ($this->status) {

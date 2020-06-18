@@ -1,9 +1,9 @@
 <?php
 
-namespace Zofe\Rapyd\DataForm\Field;
+namespace Mladindima\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
-use Zofe\Rapyd\Rapyd;
+use Mladindima\Rapyd\Rapyd;
 
 class Date extends Field
 {
@@ -19,7 +19,7 @@ class Date extends Field
         $this->language = config('app.locale', $this->language);
         $this->format = config('rapyd.fields.date.format', $this->format);
     }
-    
+
     /**
      * set instarnal preview date format
      * @param $format valid php date format

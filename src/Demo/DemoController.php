@@ -1,4 +1,4 @@
-<?php namespace Zofe\Rapyd\Demo;
+<?php namespace Mladindima\Rapyd\Demo;
 
 
 use Illuminate\Routing\Controller;
@@ -374,7 +374,7 @@ class DemoController extends Controller
         $grid->paginate(10);
         return $grid;
     }
-    
+
     public function anyNudeedit()
     {
         if (\Input::get('do_delete')==1) return  "not the first";
@@ -386,8 +386,8 @@ class DemoController extends Controller
         $edit->add('public','Public','checkbox');
         return $edit->view();
     }
-    
-    
+
+
     public function getEmbed()
     {
         //embed some widgets and isolate the dom using riot & pjax
@@ -395,7 +395,7 @@ class DemoController extends Controller
 
         //if you prefer you can simply use an html tag
         $embed2 = '<dataembed id="embed2" remote="/rapyd-demo/nudeedit?modify=1"></dataembed>';
-        
+
         return view('rapyd::demo.embed', compact('embed1','embed2'));
     }
 

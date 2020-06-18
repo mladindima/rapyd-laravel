@@ -1,6 +1,6 @@
 <?php
 
-namespace Zofe\Rapyd\DataForm\Field;
+namespace Mladindima\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
 
@@ -45,12 +45,12 @@ class Map extends Field
     public function getValue()
     {
         $process = (\Input::get('search') || \Input::get('save')) ? true : false;
-        
+
         if ($this->request_refill == true && $process && \Input::exists($this->lat) ) {
             $this->value['lat'] = \Input::get($this->lat);
             $this->value['lon'] = \Input::get($this->lon);
             $this->is_refill = true;
-            
+
         } elseif (($this->status == "create") && ($this->insert_value != null)) {
             $this->value = $this->insert_value;
         } elseif (($this->status == "modify") && ($this->update_value != null)) {
@@ -77,7 +77,7 @@ class Map extends Field
             $this->new_value = $this->update_value;
         }
     }
-    
+
     public function autoUpdate($save = false)
     {
         if (isset($this->model))
@@ -92,7 +92,7 @@ class Map extends Field
         }
         return true;
     }
-    
+
     public function build()
     {
         $output = "";
@@ -110,7 +110,7 @@ class Map extends Field
                     $output = $this->layout['null_label'];
                 } else {
                     $output = "<img border=\"0\" src=\"//maps.googleapis.com/maps/api/staticmap?center={$this->value['lat']},{$this->value['lon']}&zoom={$this->zoom}&size=500x500\">";
-                   
+
                 }
                 $output = "<div class='help-block'>" . $output . "</div>";
                 break;
@@ -121,7 +121,7 @@ class Map extends Field
                 $output .= Form::hidden($this->lon, $this->value['lon'], ['id'=>$this->lon]);
                 $output .= '<div id="map_'.$this->name.'" style="width:500px; height:500px"></div>';
                 $output .= '<script src="' . $this->getUrl() . '"></script>';
-                
+
             \Rapyd::script("
         
             function initialize()
@@ -161,7 +161,7 @@ class Map extends Field
             }
             initialize();
         ");
-                
+
                 break;
 
             case "hidden":

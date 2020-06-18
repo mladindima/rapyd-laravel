@@ -14,15 +14,15 @@ Burp::get(null, 'ord=(-?)(\w+)', array('as'=>'orderby', function($direction, $fi
     BurpEvent::queue('dataset.sort', array($direction, $field));
 }))->remove('page');
 
-//todo: dataedit  
+//todo: dataedit
 
 
 
 Route::group(['middleware' => 'web'], function () {
 
-    Route::get('rapyd-ajax/{hash}', array('as' => 'rapyd.remote', 'uses' => '\Zofe\Rapyd\Controllers\AjaxController@getRemote'));
+    Route::get('rapyd-ajax/{hash}', array('as' => 'rapyd.remote', 'uses' => '\Mladindima\Rapyd\Controllers\AjaxController@getRemote'));
 
-    Route::namespace('Zofe\Rapyd\Demo')->prefix('rapyd-demo')->group(function() {
+    Route::namespace('Mladindima\Rapyd\Demo')->prefix('rapyd-demo')->group(function() {
         Route::get('/',             'DemoController@getIndex');
         Route::get('/models',       'DemoController@getModels');
         Route::get('/schema',       'DemoController@getSchema');

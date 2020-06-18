@@ -1,8 +1,8 @@
-<?php namespace Zofe\Rapyd\DataGrid;
+<?php namespace Mladindima\Rapyd\DataGrid;
 
 use Illuminate\Support\Facades\View;
-use Zofe\Rapyd\DataSet as DataSet;
-use Zofe\Rapyd\Persistence;
+use Mladindima\Rapyd\DataSet as DataSet;
+use Mladindima\Rapyd\Persistence;
 use Illuminate\Support\Facades\Config;
 
 class DataGrid extends DataSet
@@ -16,7 +16,7 @@ class DataGrid extends DataSet
     public $output = "";
     public $attributes = array("class" => "table");
     public $checkbox_form = false;
-    
+
     protected $row_callable = array();
 
     /**
@@ -174,7 +174,7 @@ class DataGrid extends DataSet
     protected function getCellValue($column, $tablerow, $sanitize = true)
     {
         //blade
-        if (strpos($column->name, '{{') !== false || 
+        if (strpos($column->name, '{{') !== false ||
             strpos($column->name, '{!!') !== false) {
 
             if (is_object($tablerow) && method_exists($tablerow, "getAttributes")) {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Zofe\Rapyd\DataForm\Field;
+namespace Mladindima\Rapyd\DataForm\Field;
 
 
-//TODO simple 
+//TODO simple
 class Collection extends Container
 {
 
     public $type = "collection";
-    
+
 
 }

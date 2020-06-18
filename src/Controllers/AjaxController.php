@@ -1,4 +1,4 @@
-<?php namespace Zofe\Rapyd\Controllers;
+<?php namespace Mladindima\Rapyd\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Input;

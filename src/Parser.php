@@ -1,4 +1,4 @@
-<?php namespace Zofe\Rapyd;
+<?php namespace Mladindima\Rapyd;
 
 use Illuminate\View\Compilers\BladeCompiler;
 

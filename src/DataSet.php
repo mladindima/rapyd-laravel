@@ -1,13 +1,13 @@
 <?php
 
-namespace Zofe\Rapyd;
+namespace Mladindima\Rapyd;
 
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
-use Zofe\Rapyd\Exceptions\DataSetException;
+use Mladindima\Rapyd\Exceptions\DataSetException;
 
 class DataSet extends Widget
 {
@@ -51,7 +51,7 @@ class DataSet extends Widget
         $ins->source = $source;
 
         //inherit cid from datafilter
-        if ($ins->source instanceof \Zofe\Rapyd\DataFilter\DataFilter) {
+        if ($ins->source instanceof \Mladindima\Rapyd\DataFilter\DataFilter) {
             $ins->cid = $ins->source->cid;
         }
         //generate new component id
@@ -141,7 +141,7 @@ class DataSet extends Widget
             $this->type = "model";
             $this->query = $this->source;
 
-        } elseif ( is_a($this->source, "\Zofe\Rapyd\DataFilter\DataFilter")) {
+        } elseif ( is_a($this->source, "\Mladindima\Rapyd\DataFilter\DataFilter")) {
            $this->type = "model";
            $this->query = $this->source->query;
 
@@ -298,7 +298,7 @@ class DataSet extends Widget
 
     /**
      * current data collection
-     * 
+     *
      * @return array
      */
     public function getData()
@@ -307,15 +307,15 @@ class DataSet extends Widget
     }
 
     /**
-     * total row count 
-     * 
+     * total row count
+     *
      * @return string
      */
     public function totalRows()
     {
         return $this->total_rows;
     }
-    
+
     /**
      * @param string $view
      *
@@ -340,21 +340,21 @@ class DataSet extends Widget
     }
 
     /**
-     * add the ability to check & enable "order by" of given field/s 
-     * by default you can order by 
-     * 
+     * add the ability to check & enable "order by" of given field/s
+     * by default you can order by
+     *
      * @param mixed $fieldname
      */
     public function addOrderBy($fieldname)
     {
         $this->orderby_check = true;
         $this->orderby_fields = array_merge($this->orderby_fields, (array)$fieldname);
-        
+
         return $this;
     }
-    
+
     protected function canOrderby($fieldname)
     {
-        return (!$this->orderby_check || in_array($fieldname, $this->orderby_fields)); 
+        return (!$this->orderby_check || in_array($fieldname, $this->orderby_fields));
     }
 }

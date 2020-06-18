@@ -1,6 +1,6 @@
 <?php
 
-namespace Zofe\Rapyd\DataForm\Field;
+namespace Mladindima\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
 use Illuminate\Support\Facades\Schema;
@@ -13,14 +13,14 @@ class Iframe extends Field
     public $height = "200";
     public $scrolling = "auto";
     public $frameborder = "0";
-    
-    
+
+
     public function src($src)
     {
         $this->src = $src;
         return $this;
     }
-    
+
     protected function iframe()
     {
         $this->src = $this->parseString($this->src);
@@ -28,15 +28,15 @@ class Iframe extends Field
             '<IFRAME src="%s" width="100%%" height="%s" scrolling="%s" frameborder="%s" id="%s" onLoad="iframeAutoResize(\'%s\');">
             iframe not supported
             </IFRAME>', $this->src, $this->height, $this->scrolling, $this->frameborder, $this->name, $this->name);
-        
-        
+
+
     }
-    
-    
+
+
     public function build()
     {
         $output = "";
-        
+
         if (parent::build() === false) return;
 
         switch ($this->status) {
@@ -63,7 +63,7 @@ class Iframe extends Field
                         };
                     ");
 
-                    
+
                 break;
             case "hidden":
                 $output = "";

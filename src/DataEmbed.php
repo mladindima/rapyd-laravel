@@ -1,16 +1,16 @@
-<?php namespace Zofe\Rapyd;
+<?php namespace Mladindima\Rapyd;
 
 
 /**
  * Class DataEmbed
- * @package Zofe\Rapyd
+ * @package Mladindima\Rapyd
  */
 class DataEmbed
 {
     public $output = "";
     public $url;
     public $id;
-    
+
     public static function source($url, $id)
     {
         $ins = new static();
@@ -25,10 +25,10 @@ class DataEmbed
         $id  = $this->id;
         \Rapyd::tag('tags/dataembed.html');
         $this->output = view($view, compact('url','id'))->render();
-        
+
         return $this->output;
     }
-    
+
     public function __toString()
     {
         if ($this->output == "") {
