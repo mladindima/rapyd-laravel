@@ -1,4 +1,4 @@
-<?php namespace Mladindima\Rapyd;
+<?php namespace Zofe\Rapyd;
 
 use Illuminate\Container\Container;
 use Collective\Html\HtmlFacade as HTML;

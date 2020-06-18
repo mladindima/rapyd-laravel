@@ -1,13 +1,13 @@
 <?php
 
-namespace Mladindima\Rapyd\DataEdit;
+namespace Zofe\Rapyd\DataEdit;
 
-use Mladindima\Rapyd\DataForm\DataForm;
+use Zofe\Rapyd\DataForm\DataForm;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Config;
-use Mladindima\Rapyd\Persistence;
+use Zofe\Rapyd\Persistence;
 
 class DataEdit extends DataForm
 {

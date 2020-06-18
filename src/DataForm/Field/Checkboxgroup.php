@@ -1,4 +1,4 @@
-<?php  namespace Mladindima\Rapyd\DataForm\Field;
+<?php  namespace Zofe\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
 

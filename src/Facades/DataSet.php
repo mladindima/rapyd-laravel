@@ -1,4 +1,4 @@
-<?php namespace Mladindima\Rapyd\Facades;
+<?php namespace Zofe\Rapyd\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -9,6 +9,6 @@ class DataSet extends Facade
    *
    * @return string
    */
-  protected static function getFacadeAccessor() { return 'Mladindima\Rapyd\DataSet'; }
+  protected static function getFacadeAccessor() { return 'Zofe\Rapyd\DataSet'; }
 
 }

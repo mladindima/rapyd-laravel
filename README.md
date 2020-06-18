@@ -36,7 +36,7 @@ you can also require a specific version:
 
 note: for Laravel <=5.4 you need to add the provider in your config/app.php:
 
-`Mladindima\Rapyd\RapydServiceProvider::class` 
+`Zofe\Rapyd\RapydServiceProvider::class` 
 
 
 ## A couple of minutes of your time before you start
@@ -377,20 +377,20 @@ To use widgets you can:
 - just use the global aliases: `\DataGrid::source()...` (please note the '\')
 - or import facades:
 ```php
-    use Mladindima\Rapyd\Facades\DataSet;
-    use Mladindima\Rapyd\Facades\DataGrid;
-    use Mladindima\Rapyd\Facades\DataForm;
-    use Mladindima\Rapyd\Facades\DataForm;
-    use Mladindima\Rapyd\Facades\DataEdit;
+    use Zofe\Rapyd\Facades\DataSet;
+    use Zofe\Rapyd\Facades\DataGrid;
+    use Zofe\Rapyd\Facades\DataForm;
+    use Zofe\Rapyd\Facades\DataForm;
+    use Zofe\Rapyd\Facades\DataEdit;
     ..
     DataGrid::source()... 
 ```
 - or you can extend each class 
 ```php
-    Class MyDataGrid extends Mladindima\Rapyd\DataGrid\DataGrid {
+    Class MyDataGrid extends Zofe\Rapyd\DataGrid\DataGrid {
     ...
     }
-    Class MyDataEdit extends Mladindima\Rapyd\DataEdit\DataEdit {
+    Class MyDataEdit extends Zofe\Rapyd\DataEdit\DataEdit {
     ...
     }
     ..

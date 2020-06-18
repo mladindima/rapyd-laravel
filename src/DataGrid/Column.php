@@ -1,6 +1,6 @@
-<?php namespace Mladindima\Rapyd\DataGrid;
+<?php namespace Zofe\Rapyd\DataGrid;
 
-use Mladindima\Rapyd\Helpers\HTML;
+use Zofe\Rapyd\Helpers\HTML;
 
 class Column
 {

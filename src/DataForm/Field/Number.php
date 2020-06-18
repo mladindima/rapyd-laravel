@@ -1,9 +1,9 @@
 <?php
 
-namespace Mladindima\Rapyd\DataForm\Field;
+namespace Zofe\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
-use Mladindima\Rapyd\Rapyd;
+use Zofe\Rapyd\Rapyd;
 
 // Mapping to HTML5 Input type
 // http://www.w3.org/TR/html-markup/input.number.html

@@ -1,12 +1,12 @@
 <?php
 
-namespace Mladindima\Rapyd\DataForm\Field;
+namespace Zofe\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use MyProject\Proxies\__CG__\stdClass;
-use Mladindima\Rapyd\Rapyd;
+use Zofe\Rapyd\Rapyd;
 
 class Autocomplete extends Field
 {

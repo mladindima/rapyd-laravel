@@ -1,4 +1,4 @@
-<?php namespace Mladindima\Rapyd\Demo;
+<?php namespace Zofe\Rapyd\Demo;
 
 /**
  * Comment
@@ -10,11 +10,11 @@ class Comment extends \Eloquent
 
     public function article()
     {
-        return $this->belongsTo('Mladindima\Rapyd\Models\Article', 'article_id');
+        return $this->belongsTo('Zofe\Rapyd\Models\Article', 'article_id');
     }
 
     public function author()
     {
-        return $this->belongsTo('Mladindima\Rapyd\Models\Author', 'author_id');
+        return $this->belongsTo('Zofe\Rapyd\Models\Author', 'author_id');
     }
 }

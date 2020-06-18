@@ -1,4 +1,4 @@
-<?php namespace Mladindima\Rapyd\Demo;
+<?php namespace Zofe\Rapyd\Demo;
 
 /**
  * Article
@@ -9,22 +9,22 @@ class Article extends \Eloquent
 
     public function author()
     {
-        return $this->belongsTo('Mladindima\Rapyd\Demo\Author', 'author_id');
+        return $this->belongsTo('Zofe\Rapyd\Demo\Author', 'author_id');
     }
 
     public function comments()
     {
-        return $this->hasMany('Mladindima\Rapyd\Demo\Comment', 'article_id');
+        return $this->hasMany('Zofe\Rapyd\Demo\Comment', 'article_id');
     }
 
     public function categories()
     {
-        return $this->belongsToMany('Mladindima\Rapyd\Demo\Category', 'demo_article_category', 'article_id','category_id');
+        return $this->belongsToMany('Zofe\Rapyd\Demo\Category', 'demo_article_category', 'article_id','category_id');
     }
 
     public function detail()
     {
-        return $this->hasOne('Mladindima\Rapyd\Demo\ArticleDetail', 'article_id');
+        return $this->hasOne('Zofe\Rapyd\Demo\ArticleDetail', 'article_id');
     }
 
     public function scopeFreesearch($query, $value)

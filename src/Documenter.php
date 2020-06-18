@@ -1,4 +1,4 @@
-<?php namespace Mladindima\Rapyd;
+<?php namespace Zofe\Rapyd;
 
 use ReflectionClass;
 use ReflectionMethod;

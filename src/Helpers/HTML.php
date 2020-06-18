@@ -1,4 +1,4 @@
-<?php namespace Mladindima\Rapyd\Helpers;
+<?php namespace Zofe\Rapyd\Helpers;
 
 class HTML
 {

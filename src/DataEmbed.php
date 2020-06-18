@@ -1,9 +1,9 @@
-<?php namespace Mladindima\Rapyd;
+<?php namespace Zofe\Rapyd;
 
 
 /**
  * Class DataEmbed
- * @package Mladindima\Rapyd
+ * @package Zofe\Rapyd
  */
 class DataEmbed
 {

@@ -1,4 +1,4 @@
-<?php namespace Mladindima\Rapyd;
+<?php namespace Zofe\Rapyd;
 
 use Collective\Html\FormBuilder;
 use Collective\Html\HtmlBuilder;
@@ -56,17 +56,17 @@ class RapydServiceProvider extends ServiceProvider
 
             $loader->alias('Input', 'Illuminate\Support\Facades\Input');
 
-            $loader->alias('Rapyd'     , 'Mladindima\Rapyd\Facades\Rapyd'     );
+            $loader->alias('Rapyd'     , 'Zofe\Rapyd\Facades\Rapyd'     );
 
             //deprecated .. and more facade are really needed ?
-            $loader->alias('DataSet'   , 'Mladindima\Rapyd\Facades\DataSet'   );
-            $loader->alias('DataGrid'  , 'Mladindima\Rapyd\Facades\DataGrid'  );
-            $loader->alias('DataForm'  , 'Mladindima\Rapyd\Facades\DataForm'  );
-            $loader->alias('DataEdit'  , 'Mladindima\Rapyd\Facades\DataEdit'  );
-            $loader->alias('DataFilter', 'Mladindima\Rapyd\Facades\DataFilter');
-            $loader->alias('DataEmbed' , 'Mladindima\Rapyd\Facades\DataEmbed');
-            $loader->alias('DataTree' , 'Mladindima\Rapyd\Facades\DataTree');
-            $loader->alias('Documenter', 'Mladindima\Rapyd\Facades\Documenter');
+            $loader->alias('DataSet'   , 'Zofe\Rapyd\Facades\DataSet'   );
+            $loader->alias('DataGrid'  , 'Zofe\Rapyd\Facades\DataGrid'  );
+            $loader->alias('DataForm'  , 'Zofe\Rapyd\Facades\DataForm'  );
+            $loader->alias('DataEdit'  , 'Zofe\Rapyd\Facades\DataEdit'  );
+            $loader->alias('DataFilter', 'Zofe\Rapyd\Facades\DataFilter');
+            $loader->alias('DataEmbed' , 'Zofe\Rapyd\Facades\DataEmbed');
+            $loader->alias('DataTree' , 'Zofe\Rapyd\Facades\DataTree');
+            $loader->alias('Documenter', 'Zofe\Rapyd\Facades\Documenter');
 
 
         });

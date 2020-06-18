@@ -1,4 +1,4 @@
-<?php namespace Mladindima\Rapyd\Demo;
+<?php namespace Zofe\Rapyd\Demo;
 
 /**
  * Author
@@ -12,12 +12,12 @@ class Author extends \Eloquent
 
     public function articles()
     {
-        return $this->hasMany('Mladindima\Rapyd\Models\Article');
+        return $this->hasMany('Zofe\Rapyd\Models\Article');
     }
 
     public function comments()
     {
-        return $this->hasMany('Mladindima\Rapyd\Models\Comment');
+        return $this->hasMany('Zofe\Rapyd\Models\Comment');
     }
 
     public function getFullnameAttribute($value)
