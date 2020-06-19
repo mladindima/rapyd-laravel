@@ -3,7 +3,7 @@
 namespace Zofe\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
-use Illuminate\Http\Request as Input;
+use Illuminate\Support\Facades\Request as Input;
 use Intervention\Image\ImageManagerStatic as ImageManager;
 
 class Image extends File

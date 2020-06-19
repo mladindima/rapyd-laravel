@@ -178,7 +178,7 @@ class DemoController extends Controller
 
         $grid->add('id','ID', true)->style("width:100px");
         $grid->add('title','Title');
-        $grid->add('{!! str_limit($body,4) !!}','Body');
+        $grid->add('{!! \Illuminate\Support\Str::limit($body,4) !!}','Body');
         $grid->add('{{ $author->fullname }}','Author', 'author_id');
         $grid->add('{{ implode(", ", $categories->pluck("name")->all()) }}','Categories');
 

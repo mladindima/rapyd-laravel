@@ -1,7 +1,7 @@
 <?php namespace Zofe\Rapyd\Controllers;
 
 use Illuminate\Routing\Controller;
-use Illuminate\Http\Request as Input;
+use Illuminate\Support\Facades\Request as Input;
 use Illuminate\Support\Facades\Session;
 
 class AjaxController extends Controller
