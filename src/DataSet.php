@@ -4,7 +4,7 @@ namespace Zofe\Rapyd;
 
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request as Input;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 use Zofe\Rapyd\Exceptions\DataSetException;

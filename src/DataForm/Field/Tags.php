@@ -3,7 +3,7 @@
 namespace Zofe\Rapyd\DataForm\Field;
 
 use Collective\Html\FormFacade as Form;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request as Input;
 use Illuminate\Support\Facades\Session;
 use MyProject\Proxies\__CG__\stdClass;
 use Zofe\Rapyd\Rapyd;
